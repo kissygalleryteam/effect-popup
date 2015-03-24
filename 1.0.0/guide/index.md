@@ -4,8 +4,8 @@ Popup是一个淘宝弹层动效组件示例，我们期待大家遵循统一的
 
 ## 初始化组件
 		
-    S.use('kg/popup/1.0.0/index', function (S, Popup) {
-         var popup = new Popup();
+    S.use('kg/effect-popup/1.0.0/index', function (S, EffectPopup) {
+         var popup = new EffectPopup();
          popup.open('有一天，我们发现，做个有情怀的码农是多么重要');
     })
 

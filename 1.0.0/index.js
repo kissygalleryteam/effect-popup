@@ -1,6 +1,6 @@
 var $ = require('node').all;
 
-function Popup(settings) {
+function EffectPopup(settings) {
     var p = this,
         defaults = {
             backClass: 'popup_back',
@@ -220,4 +220,4 @@ function Popup(settings) {
 
 }
 
-module.exports = Popup;
+module.exports = EffectPopup;
