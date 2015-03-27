@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>EffectPopup的demo</title>
+    <script src="//g.alicdn.com/kissy/k/1.4.8/seed-min.js" charset="utf-8"></script>
+    <style>
+        *{
+            text-decoration: none;
+            line-height: 200%;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li><a href="" id="demo1">查看DEMO1</a></li>
+    <li><a href="" id="demo2">查看DEMO2</a><span id="status2"></span></li>
+</ul>
+
+<script>
+    var S = KISSY;
+    if (S.Config.debug) {
+        var debugPath = "http://localhost:5555/";
+        S.config({
+            packages:[
+                {
+                    name:"kg/effect-popup/2.0.0",
+                    path:debugPath,
+                    charset:"utf-8",
+                    ignorePackageNameInUri: true
+                }
+            ]
+        });
+    }
+
+    S.use('kg/effect-popup/2.0.0/index,kg/effect-popup/2.0.0/index.css', function (S, EffectPopup) {
+        var $ = function(d){return document.getElementById(d);};
+        
+        $('demo1').onclick=function(){
+            var popup1 = new EffectPopup();
+            popup1.open('<p>有一天，我们发现，做个有情怀的码农是多么重要</p>');
+            return false;
+        }
+        
+        $('demo2').onclick=function(){
+            var popup2 = new EffectPopup({
+                backClass: 'popup_back',
+                backOpacity: 0.7,
+                containerClass: 'popup_cont',
+                closeContent: '<div class="popup_close">&times;</div>',
+                markup: '<div class="popup"></div>',
+                speed: .3,
+                modal: false,
+                width: null,
+                height: null,
+                // 以上采用默认配置
+                beforeOpen: function() {
+                    $('status2').innerHTML = '(弹层打开前回调)';
+                },
+                afterOpen: function() {
+                    $('status2').innerHTML = '(弹层打开后回调)';
+                },
+                beforeClose: function() {
+                    $('status2').innerHTML = '(弹层关闭前回调)';
+                },
+                afterClose: function() {
+                    $('status2').innerHTML = '(弹层关闭后回调)';
+                }
+            });
+            popup2.open('<p>我们的世界很平凡，但我们都梦想着不平凡的人生</p>');
+            return false;
+        }
+    })
+</script>
+</body>
+</html>
+
