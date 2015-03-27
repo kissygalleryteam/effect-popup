@@ -4,6 +4,7 @@
     <meta charset="utf-8"/>
     <title>EffectPopup的demo</title>
     <script src="//g.alicdn.com/kissy/k/1.4.8/seed-min.js" charset="utf-8"></script>
+<<<<<<< HEAD
     <style>
         *{
             text-decoration: none;
@@ -16,6 +17,11 @@
     <li><a href="" id="demo1">查看DEMO1</a></li>
     <li><a href="" id="demo2">查看DEMO2</a><span id="status2"></span></li>
 </ul>
+=======
+</head>
+<body>
+<h2>EffectPopup的demo</h2>
+>>>>>>> dcbacf3a4536d2e6dff6397c1a51b1cc7c5d1ffd
 
 <script>
     var S = KISSY;
@@ -33,6 +39,7 @@
         });
     }
 
+<<<<<<< HEAD
     S.use('kg/effect-popup/1.0.0/index,kg/effect-popup/1.0.0/index.css', function (S, EffectPopup) {
         var $ = function(d){return document.getElementById(d);};
         
@@ -70,6 +77,10 @@
             popup2.open('<p>我们的世界很平凡，但我们都梦想着不平凡的人生</p>');
             return false;
         }
+=======
+    S.use('kg/effect-popup/1.0.0/index', function (S, EffectPopup) {
+        new EffectPopup();
+>>>>>>> dcbacf3a4536d2e6dff6397c1a51b1cc7c5d1ffd
     })
 </script>
 </body>

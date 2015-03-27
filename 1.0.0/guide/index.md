@@ -1,10 +1,15 @@
 ## 综述
 
+<<<<<<< HEAD
 Popup是一个淘宝弹层动效组件示例，我们期待大家遵循统一的动效展示形式，本组件可作为一种参考。
+=======
+EffectPopup。
+>>>>>>> dcbacf3a4536d2e6dff6397c1a51b1cc7c5d1ffd
 
 ## 初始化组件
 		
     S.use('kg/effect-popup/1.0.0/index', function (S, EffectPopup) {
+<<<<<<< HEAD
          var popup = new EffectPopup();
          popup.open('有一天，我们发现，做个有情怀的码农是多么重要');
     })
@@ -24,3 +29,9 @@ Popup是一个淘宝弹层动效组件示例，我们期待大家遵循统一的
 * afterOpen: 弹层打开后回调函数
 * beforeClose: 弹层关闭前回调函数
 * afterClose: 弹层关闭后回调函数
+=======
+         var effect-popup = new EffectPopup();
+    })
+
+## API说明
+>>>>>>> dcbacf3a4536d2e6dff6397c1a51b1cc7c5d1ffd

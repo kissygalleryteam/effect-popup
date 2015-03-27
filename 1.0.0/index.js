@@ -1,4 +1,5 @@
 var $ = require('node').all;
+<<<<<<< HEAD
 
 function EffectPopup(settings) {
     var p = this,
@@ -221,3 +222,27 @@ function EffectPopup(settings) {
 }
 
 module.exports = EffectPopup;
+=======
+var Base = require('base');
+
+var EffectPopup = Base.extend({
+    initializer:function(){
+        var self = this;
+        var $target = self.get('$target');
+    }
+},{
+    ATTRS:{
+        $target:{
+            value:'',
+            getter:function(v){
+                return $(v);
+            }
+        }
+    }
+});
+
+module.exports = EffectPopup;
+
+
+
+>>>>>>> dcbacf3a4536d2e6dff6397c1a51b1cc7c5d1ffd
