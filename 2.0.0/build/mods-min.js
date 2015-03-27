@@ -1,1 +1,0 @@
-KISSY.config("requires",{"kg/effect-popup/2.0.0/index":["node"],"kg/effect-popup/2.0.0/lib/main":["node","base"]});
